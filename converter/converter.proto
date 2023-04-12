@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package converter;
+
+option go_package = "app/converter";
+
+service ConverterService {
+
+    rpc ConvertToPDF(ConverterReq) returns (ConverterResp) {}
+
+}
+
+
+message ConverterReq {
+    string file = 1;
+}
+
+message ConverterResp {
+    string file = 1;
+}
